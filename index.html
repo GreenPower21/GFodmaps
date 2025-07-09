@@ -234,6 +234,61 @@ document.addEventListener('DOMContentLoaded', () => {
       { id: 206, name: 'Atole, Champurrado', status: 'prohibido', category: 'Bebidas', notes: 'Hechos con leche regular y/o maíz tierno.' },
       { id: 207, name: 'Jugos embotellados', status: 'prohibido', category: 'Bebidas', notes: 'Altos en fructosa.' },
       { id: 208, name: 'Pulque', status: 'prohibido', category: 'Bebidas', notes: 'Fermentado del aguamiel (agave), alto en fructanos.' },
+      // Carnes frías permitidas
+      { id: 210, name: 'Pechuga de pavo (fiambre natural)', status: 'permitido', category: 'Proteínas', notes: 'Sin aditivos, solo carne natural.' },
+      { id: 211, name: 'Pechuga de pollo (fiambre natural)', status: 'permitido', category: 'Proteínas', notes: 'Sin aditivos, solo carne natural.' },
+      { id: 212, name: 'Roast beef (rosbif casero)', status: 'permitido', category: 'Proteínas', notes: 'Sin aditivos o casero.' },
+      { id: 213, name: 'Jamón cocido bajo en sal', status: 'permitido', category: 'Proteínas', notes: 'Sin azúcares ni condimentos añadidos.' },
+      { id: 214, name: 'Lomo embuchado', status: 'permitido', category: 'Proteínas', notes: 'Solo carne curada, sin aditivos.' },
+      // Carnes frías prohibidas
+      { id: 215, name: 'Salami / Salame', status: 'prohibido', category: 'Proteínas', notes: 'Puede contener ajo y lactosa.' },
+      { id: 216, name: 'Mortadela / Bologna', status: 'prohibido', category: 'Proteínas', notes: 'Suele tener lactosa y almidones.' },
+      { id: 217, name: 'Jamón serrano / Ibérico', status: 'prohibido', category: 'Proteínas', notes: 'Más fermentado, en pequeñas cantidades puede tolerarse.' },
+      { id: 218, name: 'Tocino / Panceta con azúcar', status: 'prohibido', category: 'Proteínas', notes: 'Con azúcar o marinados.' },
+      { id: 219, name: 'Pastrami', status: 'prohibido', category: 'Proteínas', notes: 'Frecuente con condimentos ricos en FODMAPs.' },
+      // Frutas adicionales permitidas
+      { id: 220, name: 'Maracuyá / Parchita', status: 'permitido', category: 'Frutas', notes: '' },
+      { id: 221, name: 'Melón cantalupo', status: 'permitido', category: 'Frutas', notes: 'Media taza.' },
+      { id: 222, name: 'Arándanos', status: 'permitido', category: 'Frutas', notes: 'Máximo 20 arándanos.' },
+      // Frutas adicionales prohibidas
+      { id: 223, name: 'Pera', status: 'prohibido', category: 'Frutas', notes: 'Alta en fructosa y sorbitol.' },
+      { id: 224, name: 'Ciruela', status: 'prohibido', category: 'Frutas', notes: 'Alta en sorbitol.' },
+      { id: 225, name: 'Durazno / Melocotón', status: 'prohibido', category: 'Frutas', notes: 'Alto en sorbitol.' },
+      { id: 226, name: 'Nectarina', status: 'prohibido', category: 'Frutas', notes: 'Alta en sorbitol.' },
+      { id: 227, name: 'Higo', status: 'prohibido', category: 'Frutas', notes: 'Alto en fructosa.' },
+      { id: 228, name: 'Cereza', status: 'prohibido', category: 'Frutas', notes: 'Alta en fructosa.' },
+      { id: 229, name: 'Frutas secas', status: 'prohibido', category: 'Frutas', notes: 'Por concentración de azúcares.' },
+      // Verduras adicionales permitidas
+      { id: 230, name: 'Rábanos', status: 'permitido', category: 'Verduras', notes: '' },
+      { id: 231, name: 'Nabo', status: 'permitido', category: 'Verduras', notes: '' },
+      { id: 232, name: 'Albahaca fresca', status: 'permitido', category: 'Verduras', notes: 'Hierbas frescas.' },
+      { id: 233, name: 'Orégano fresco', status: 'permitido', category: 'Verduras', notes: 'Hierbas frescas.' },
+      { id: 234, name: 'Tomillo fresco', status: 'permitido', category: 'Verduras', notes: 'Hierbas frescas.' },
+      // Verduras adicionales prohibidas
+      { id: 235, name: 'Coliflor', status: 'prohibido', category: 'Verduras', notes: 'Alta en manitol.' },
+      { id: 236, name: 'Brócoli (tallos)', status: 'prohibido', category: 'Verduras', notes: 'Alto en fructanos.' },
+      { id: 237, name: 'Repollo / Col blanca', status: 'prohibido', category: 'Verduras', notes: 'Alto en fructanos.' },
+      { id: 238, name: 'Alcachofa', status: 'prohibido', category: 'Verduras', notes: 'Alta en fructanos.' },
+      { id: 239, name: 'Espárragos', status: 'prohibido', category: 'Verduras', notes: 'Alto en fructanos.' },
+      { id: 240, name: 'Betabel / Remolacha', status: 'prohibido', category: 'Verduras', notes: 'En exceso.' },
+      { id: 241, name: 'Guisantes / Arvejas', status: 'prohibido', category: 'Verduras', notes: 'Altos en GOS.' },
+      { id: 242, name: 'Habas', status: 'prohibido', category: 'Verduras', notes: 'Altas en GOS.' },
+      { id: 243, name: 'Champiñones', status: 'prohibido', category: 'Verduras', notes: 'Muchos son altos en manitol.' },
+      // Aceites y mantequillas permitidos
+      { id: 244, name: 'Aceite de oliva extra virgen', status: 'permitido', category: 'Condimentos', notes: 'EVOO, aceite de oliva virgen.' },
+      { id: 245, name: 'Aceite de canola', status: 'permitido', category: 'Condimentos', notes: 'Aceite de colza.' },
+      { id: 246, name: 'Aceite de coco', status: 'permitido', category: 'Condimentos', notes: 'Refinado o virgen, sin aditivos.' },
+      { id: 247, name: 'Aceite de aguacate / palta', status: 'permitido', category: 'Condimentos', notes: 'Puro.' },
+      { id: 248, name: 'Aceite de girasol', status: 'permitido', category: 'Condimentos', notes: 'Semillas de girasol.' },
+      { id: 249, name: 'Aceite de uva', status: 'permitido', category: 'Condimentos', notes: 'Aceite de semilla de uva.' },
+      { id: 250, name: 'Ghee / Mantequilla clarificada', status: 'permitido', category: 'Condimentos', notes: 'Sin lactosa, ideal para SII.' },
+      { id: 251, name: 'Aceite de sésamo', status: 'permitido', category: 'Condimentos', notes: 'Aceite de ajonjolí.' },
+      // Aceites y mantequillas prohibidos
+      { id: 252, name: 'Aceites saborizados con ajo', status: 'prohibido', category: 'Condimentos', notes: 'Contienen fructanos si el ajo no ha sido retirado.' },
+      { id: 253, name: 'Aceites saborizados con cebolla', status: 'prohibido', category: 'Condimentos', notes: 'Contienen fructanos.' },
+      { id: 254, name: 'Mantequilla con ajo / hierbas', status: 'prohibido', category: 'Condimentos', notes: 'Si incluye ajo o cebolla en trozos o polvo.' },
+      { id: 255, name: 'Margarinas con aditivos lácteos', status: 'prohibido', category: 'Condimentos', notes: 'Puede tener lactosa, polioles o GOS ocultos.' },
+      { id: 256, name: 'Mantequilla compuesta', status: 'prohibido', category: 'Condimentos', notes: 'Con sabores como miel, frutas secas o especias fermentadas.' },
     ];
 
     // --- LÓGICA DE LA APLICACIÓN ---
