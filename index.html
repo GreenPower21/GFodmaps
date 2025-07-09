@@ -337,14 +337,19 @@ document.addEventListener('DOMContentLoaded', () => {
         searchInput.addEventListener('input', handleSearch);
     }
 
+    // Función para normalizar texto (remover acentos)
+    function normalizeText(text) {
+        return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    }
+
     function handleSearch(e) {
-        const searchTerm = e.target.value.toLowerCase();
+        const searchTerm = normalizeText(e.target.value);
         const resultsContainer = document.getElementById('search-results');
         
         if (searchTerm.length > 1) {
             const results = fodmapData.filter(item => 
-                item.name.toLowerCase().includes(searchTerm) || 
-                item.notes.toLowerCase().includes(searchTerm)
+                normalizeText(item.name).includes(searchTerm) || 
+                normalizeText(item.notes).includes(searchTerm)
             );
             
             if (results.length > 0) {
